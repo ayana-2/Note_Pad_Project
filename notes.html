@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes Application - My Notes</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>📝 Notes Application</h2>
+
+        <div class="nav-links">
+
+            <a href="home.html">Home</a>
+
+            <a href="notes.html">Notes</a>
+
+            <a href="index.html">Logout</a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="notes-section">
+
+
+        <div class="notes-header">
+
+            <p class="small-heading">
+                ✨ YOUR PERSONAL SPACE
+            </p>
+
+            <h1>
+                My Notes
+            </h1>
+
+            <p>
+                Capture your thoughts, ideas and memories.
+            </p>
+
+
+            <button
+                id="addNoteButton"
+                class="add-note-button"
+            >
+                + Add New Note
+            </button>
+
+        </div>
+
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="🔍 Search your notes..."
+            >
+
+            <p id="searchMessage"></p>
+
+        </div>
+
+
+        <div
+            id="noteForm"
+            class="note-form hidden"
+        >
+
+            <h2>
+                ✨ Create New Note
+            </h2>
+
+
+            <div class="input-group">
+
+                <label>
+                    Note Title
+                </label>
+
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Enter note title"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Note Content
+                </label>
+
+                <textarea
+                    id="noteContent"
+                    placeholder="Write your note here..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Add Image
+                </label>
+
+                <input
+                    type="file"
+                    id="noteImage"
+                    accept="image/*"
+                >
+
+            </div>
+
+
+            <button
+                id="saveNoteButton"
+                class="save-note-button"
+            >
+                Save Note
+            </button>
+
+        </div>
+
+
+        <div
+            id="notesContainer"
+            class="notes-grid"
+        ></div>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
